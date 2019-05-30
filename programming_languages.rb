@@ -1,5 +1,3 @@
-require 'pry'
-
 def reformat_languages(languages)
   	# your code here
 	h = Hash.new
@@ -10,11 +8,10 @@ def reformat_languages(languages)
 				h[lang_name] = {:type => type_hash[:type],
 					:style => [style]}
 			else
+				#if the key exists, appends the new style with the existing style value
 				h[lang_name][:style] << style
 			end
 		end
 	end
-	
 	return h
-
 end
